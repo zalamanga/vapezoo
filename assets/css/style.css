@@ -436,7 +436,7 @@ h6 {
   padding: 0;
 }
 
-#hero #particles-js {
+#hero .particles-js {
   position: absolute;
   top: 0;
   left: 0;
@@ -1339,7 +1339,8 @@ section {
   padding: 10px 12px;
 }
 
-.kontak .php-email-form button[type=submit] {
+.kontak .php-email-form button[type=submit],
+.kontak .php-email-form button[type=button] {
   background: #202020;
   border: 0;
   padding: 10px 24px;
@@ -1719,7 +1720,8 @@ section {
   padding-right: 20px;
 }
 
-.faq .faq-list a {
+.faq .faq-list a,
+.faq .faq-list .faq-question {
   display: block;
   position: relative;
   font-size: 18px;
@@ -1754,4 +1756,103 @@ section {
 
 .faq .faq-list .collapsed .icon-close {
   display: none;
+}
+
+
+button.mobile-nav-toggle {
+  background: transparent;
+  border: 0;
+  padding: 4px;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+:where(a, button, input, textarea):focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 5px #292929;
+}
+
+.faq .faq-list .faq-question {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  padding: 0 25px 0 0;
+}
+
+.subscribe {
+  display: block;
+}
+
+.subscribe-fields {
+  display: flex;
+  min-width: 0;
+  width: 100%;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.subscribe__input {
+  width: 0;
+  min-width: 0;
+}
+
+.form-notice {
+  margin-top: 12px;
+  color: inherit;
+  font-size: 14px;
+}
+
+.php-email-form fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+
+html:not(.aos-enabled) [data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+fieldset:disabled button {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+a[aria-disabled="true"] {
+  cursor: default;
+  opacity: 0.65;
+}
+
+.navbar a.nav-link,
+.navbar-mobile a.nav-link {
+  color: #f7f7f7;
+}
+
+.navbar a.nav-link:hover,
+.navbar a.nav-link[aria-current="page"] {
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 0.35em;
+}
+
+@media (max-width: 768px) {
+  .subscribe-fields {
+    flex-direction: column;
+  }
+  .subscribe__input {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

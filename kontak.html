@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>VAPEZOO</title>
+    <title>Kontak | VAPEZOO</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
     <!-- Favicons -->
     <link href="assets/img/faviconvzoo.png" rel="icon">
-    <link href="assets/img/icon.png" rel="apple-touch-icon">
+    <link href="assets/img/faviconvzoo.png" rel="apple-touch-icon">
 
 
     <!-- Google Fonts -->
@@ -49,10 +49,10 @@
                     <li><a class="nav-link" href="produk.html">Products</a></li>
                     <li><a class="nav-link" href="hexohm.html">Hexohm</a></li>
                     <li><a class="nav-link" href="news.html">News</a></li>
-                    <li><a class="nav-link" href="ganti.html">hexgantibaju</a></li>
+
                     <li><a class="nav-link" href="kontak.html">Contact us</a></li>
                 </ul>
-                <i class="bi bi-list mobile-nav-toggle"></i>
+                <button type="button" class="bi bi-list mobile-nav-toggle" aria-controls="navbar" aria-expanded="false" aria-label="Buka menu navigasi"></button>
             </nav><!-- .navbar -->
         </div>
     </header>
@@ -69,7 +69,7 @@
                 <!-- Slide 1 -->
                 <div class="carousel-item active " style="background-image: url(assets/img/slide/slide.jpg);">
                     <div class="carousel-container">
-                        <div id="particles-js"></div>
+                        <div id="particles-js" class="particles-js"></div>
                         <div class="carousel-content">
                             <h2 class="animate__animated animate__fadeInDown">CONTACT US</h2>
                         </div>
@@ -122,31 +122,34 @@
                 </div>
             </div>
     
-            <form action="forms/index.js" method="post" role="form" class="php-email-form">
+            <p id="contact-status" class="form-notice">Formulir ini belum terhubung ke layanan pengiriman. Pesan tidak akan dikirim.</p>
+<form role="form" class="php-email-form" aria-describedby="contact-status">
+<fieldset disabled>
                 <div class="row">
                     <div class="col-md-6 form-group">
-                        <input type="text" name="name" class="form-control" id="name" placeholder="Nama" required>
+                        <input type="text" aria-label="Nama" class="form-control" id="name" placeholder="Nama" required>
                     </div>
                     <div class="col-md-6 form-group mt-3 mt-md-0">
-                        <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+                        <input type="email" aria-label="Email" class="form-control" id="email" placeholder="Email" required>
                     </div>
                 </div>
                 <div class="form-group mt-3">
-                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subjek" required>
+                    <input type="text" aria-label="Subjek" class="form-control" id="subject" placeholder="Subjek" required>
                 </div>
                 <div class="form-group mt-3">
-                    <textarea class="form-control" name="message" rows="5" placeholder="Pesan" required></textarea>
+                    <textarea aria-label="Pesan" class="form-control" rows="5" placeholder="Pesan" required></textarea>
                 </div>
                 <div class="my-3">
                     <div class="loading">Loading</div>
                     <div class="error-message"></div>
                     <div class="sent-message">Your message has been sent. Thank you!</div>
                 </div>
-                <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
+                <div class="text-center"><button type="button" disabled>Send Message</button></div>
+            </fieldset>
+</form>
     
             <div class="map" data-aos="fade-up">
-                <iframe style="position: relative; overflow: hidden; width: 100%; height: 350px;"
+                <iframe title="Peta lokasi pada templat asli" loading="lazy" referrerpolicy="no-referrer" style="position: relative; overflow: hidden; width: 100%; height: 350px;"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.3418352792855!2d106.8232664147691!3d-6.2149071954988285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f1bd98c8a5e7%3A0x4a13549af6fa6d84!2sMonas!5e0!3m2!1sen!2sid!4v1620298882140!5m2!1sen!2sid"
                     frameborder="0" allowfullscreen></iframe>
             </div>
@@ -174,29 +177,32 @@
                         </p>
                         <div class="single_footer">
                             <h4 data-aos="fade-down">Berlangganan</h4>
-                            <form action="#" class="subscribe" data-aos="fade-down">
-                                <input type="email" class="subscribe__input" placeholder="Masukkan Alamat Email">
-                                <button type="submit" class="subscribe__btn">
-                                    <i class="fas fa-arrow-right"></i>
+                            <p id="newsletter-status" class="form-notice">Pendaftaran newsletter belum tersedia. Data tidak dikirim.</p>
+<form class="subscribe" data-aos="fade-down" aria-describedby="newsletter-status">
+<fieldset disabled class="subscribe-fields">
+                                <input type="email" aria-label="Alamat email newsletter" disabled class="subscribe__input" placeholder="Masukkan Alamat Email">
+                                <button type="button" disabled aria-label="Pendaftaran newsletter belum tersedia" class="subscribe__btn">
+                                    <i class="bi bi-arrow-right"></i>
                                 </button>
-                            </form>
+                            </fieldset>
+</form>
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-md-6 footer-links">
                         <h4 data-aos="fade-down">Tautan</h4>
                         <ul>
-                            <li data-aos="fade-right"><i class="bx bx-chevron-right"></i> <a href="#hero">Beranda</a>
+                            <li data-aos="fade-right"><i class="bx bx-chevron-right"></i> <a href="index.html">Beranda</a>
                             </li>
-                            <li data-aos="fade-right"><i class="bx bx-chevron-right"></i> <a href="#tentang">Tentang</a>
+                            <li data-aos="fade-right"><i class="bx bx-chevron-right"></i> <a href="about.html">Tentang</a>
                             </li>
-                            <li data-aos="fade-right"><i class="bx bx-chevron-right"></i> <a href="#jasa">Produk</a>
+                            <li data-aos="fade-right"><i class="bx bx-chevron-right"></i> <a href="produk.html">Produk</a>
                             </li>
-                            <li data-aos="fade-right"><i class="bx bx-chevron-right"></i> <a href="#team">Hexohm</a>
+                            <li data-aos="fade-right"><i class="bx bx-chevron-right"></i> <a href="hexohm.html">Hexohm</a>
                             </li>
-                            <li data-aos="fade-right"><i class="bx bx-chevron-right"></i> <a href="#pricing">Berita</a>
+                            <li data-aos="fade-right"><i class="bx bx-chevron-right"></i> <a href="news.html">Berita</a>
                             </li>
-                            <li data-aos="fade-right"><i class="bx bx-chevron-right"></i> <a href="#kontak">Kontak</a>
+                            <li data-aos="fade-right"><i class="bx bx-chevron-right"></i> <a href="kontak.html">Kontak</a>
                             </li>
                         </ul>
                     </div>
@@ -205,19 +211,19 @@
                         <h4 data-aos="fade-down">Produk Kami</h4>
                         <ul>
                             <li data-aos="fade-right"><i class="bx bx-chevron-right"></i> <a
-                                    href="#pricing">E-Liquid</a>
+                                    aria-disabled="true" title="Tautan belum tersedia">E-Liquid</a>
                             </li>
-                            <li data-aos="fade-right"><i class="bx bx-chevron-right"></i> <a href="#pricing">Device
+                            <li data-aos="fade-right"><i class="bx bx-chevron-right"></i> <a aria-disabled="true" title="Tautan belum tersedia">Device
                                     Vaping</a></li>
                             <li data-aos="fade-right"><i class="bx bx-chevron-right"></i> <a
-                                    href="#pricing">Aksesori</a>
+                                    aria-disabled="true" title="Tautan belum tersedia">Aksesori</a>
                             </li>
-                            <li data-aos="fade-right"><i class="bx bx-chevron-right"></i> <a href="#jasa">Hexohm</a>
+                            <li data-aos="fade-right"><i class="bx bx-chevron-right"></i> <a aria-disabled="true" title="Tautan belum tersedia">Hexohm</a>
                             </li>
-                            <li data-aos="fade-right"><i class="bx bx-chevron-right"></i> <a href="#jasa">Starter
+                            <li data-aos="fade-right"><i class="bx bx-chevron-right"></i> <a aria-disabled="true" title="Tautan belum tersedia">Starter
                                     Kit</a>
                             </li>
-                            <li data-aos="fade-right"><i class="bx bx-chevron-right"></i> <a href="#jasa">Perawatan
+                            <li data-aos="fade-right"><i class="bx bx-chevron-right"></i> <a aria-disabled="true" title="Tautan belum tersedia">Perawatan
                                     Vape</a>
                             </li>
                         </ul>
@@ -226,15 +232,15 @@
                     <div class="col-lg-3 col-md-6 footer-links">
                         <h4 data-aos="fade-down">Sosial Media</h4>
                         <div class="social-links mt-3">
-                            <a href="#" class="facebook" data-aos="fade-up" data-aos-delay="200"><i
+                            <a class="facebook" aria-disabled="true" aria-label="Facebook belum tersedia" title="Tautan belum tersedia" data-aos="fade-up" data-aos-delay="200"><i
                                     class="bx bxl-facebook"></i></a>
-                            <a href="#" class="instagram" data-aos="fade-down" data-aos-delay="200"><i
+                            <a class="instagram" aria-disabled="true" aria-label="Instagram belum tersedia" title="Tautan belum tersedia" data-aos="fade-down" data-aos-delay="200"><i
                                     class="bx bxl-instagram"></i></a>
-                            <a href="#" class="twitter" data-aos="fade-up" data-aos-delay="200"><i
+                            <a class="twitter" aria-disabled="true" aria-label="Twitter belum tersedia" title="Tautan belum tersedia" data-aos="fade-up" data-aos-delay="200"><i
                                     class="bx bxl-twitter"></i></a>
-                            <a href="#" class="youtube" data-aos="fade-down" data-aos-delay="200"><i
+                            <a class="youtube" aria-disabled="true" aria-label="Youtube belum tersedia" title="Tautan belum tersedia" data-aos="fade-down" data-aos-delay="200"><i
                                     class="bx bxl-youtube"></i></a>
-                            <a href="#" class="tiktok" data-aos="fade-up" data-aos-delay="200"><i
+                            <a class="tiktok" aria-disabled="true" aria-label="Tiktok belum tersedia" title="Tautan belum tersedia" data-aos="fade-up" data-aos-delay="200"><i
                                     class="bx bxl-tiktok"></i></a>
                         </div>
                     </div>
@@ -252,10 +258,10 @@
     </footer><!-- End Footer -->
 
 
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+    <a href="#hero" aria-label="Kembali ke atas" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
 
-    <a href="https://wa.me/6282125664554" class="back-to-wa d-flex align-items-center justify-content-center">
+    <a href="https://wa.me/6282125664554" aria-label="WhatsApp" class="back-to-wa d-flex align-items-center justify-content-center">
         <i class="bi bi-whatsapp"></i>
         <span>Hubungi Kami</span>
     </a>
@@ -268,7 +274,7 @@
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
+
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
