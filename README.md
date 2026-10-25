@@ -1,5 +1,7 @@
 # VAPEZOO — dokumentasi teknis
 
+Alur halaman statis, kontrol navigasi dan batas formulir dijelaskan di [CODE_FLOW](docs/CODE_FLOW.md).
+
 Website statis tujuh halaman dengan HTML, CSS, dan JavaScript. Tidak memerlukan PHP, database, atau proses build frontend. Node.js hanya dipakai untuk pengujian pengembangan.
 
 Perapihan ini mempertahankan konten dan gambar sumber, memperbaiki referensi lokal, kontrol keyboard, serta inisialisasi JavaScript. Versi Laravel dan prototipe lain merupakan aplikasi terpisah.
